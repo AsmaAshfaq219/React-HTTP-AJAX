@@ -15,7 +15,7 @@ class Blog extends Component {
     }
 
     componentDidMount() {
-        axios.get('https://jsonplaceholder.typicode.com/posts')
+        axios.get('/posts')
             .then(response => {
                 const posts = response.data.slice(0, 3);
                 this.setState({
@@ -32,7 +32,7 @@ class Blog extends Component {
     }
 
     DeleteHandler = () => {
-        axios.delete('https://jsonplaceholder.typicode.com/posts/'+this.state.selectedId)
+        axios.delete('/posts/'+this.state.selectedId)
         .then(response => {
             console.log(response);
         })
