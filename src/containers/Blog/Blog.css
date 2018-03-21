@@ -1,7 +1,21 @@
-.Posts {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    width: 80%;
-    margin: auto; 
+
+.Nav-bar{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+}
+.Nav-bar li{
+    margin: 20px;
+    display: inline-block;
+}
+
+.Nav-bar a{
+    text-decoration: none;
+    color: black;
+}
+
+.Nav-bar a:hover, .Nav-bar a:active{
+    color: orangered;
 }
