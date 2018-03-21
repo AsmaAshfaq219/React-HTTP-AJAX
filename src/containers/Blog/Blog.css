@@ -16,6 +16,8 @@
     color: black;
 }
 
-.Nav-bar a:hover, .Nav-bar a:active{
+.Nav-bar a:hover, 
+.Nav-bar a:active,
+.Nav-bar a.active{
     color: orangered;
 }
