@@ -8,7 +8,8 @@ import './Blog.css';
 class Blog extends Component {
 
     state = {
-        posts: []
+        posts: [],
+        auth: false
     }
 
     componentDidMount() {
@@ -31,10 +32,15 @@ class Blog extends Component {
                     </ul>
                 </header>
                 <Switch>
+                    {/*Navigation Guards can be managed like this*/}
+                    {/* {this.state.auth ? <Route path='/new-post' component={NewPost} /> : null} */}
                     <Route path='/new-post' component={NewPost} />
+
+                    {/* <Route render={() => <h1>Not Found</h1> } /> //if the route entered is unknown*/}
+
                     <Route path='/' render={(props) => <Posts {...props} PostsData={this.state.posts} />} />
                 </Switch>
-                <Redirect from='/posts' to='/'/>  {/* Just for practice purpose */}
+                <Redirect from='/posts' to='/' />  {/* Just for practice purpose */}
             </div>
         );
     }
