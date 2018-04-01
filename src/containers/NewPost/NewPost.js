@@ -18,6 +18,8 @@ class NewPost extends Component {
             .then(response => {
                 alert('Your data has been Posted');
                 console.log(response);
+                this.props.history.push('/'); // Push new page on to stack
+                //this.props.history.replace('/'); An alternate that replaces the page instead.
             }
             ).catch(error => console.log('There seems to be an error'))
     }
